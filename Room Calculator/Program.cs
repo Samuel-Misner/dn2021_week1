@@ -75,12 +75,12 @@ namespace VarDemo
                 size = "large";
             }
 
+            Console.WriteLine("");
             Console.WriteLine("The perimeter of your room is " + perimeter);
             Console.WriteLine("The area of your room is " + area);
             Console.WriteLine("The surface area of your room is " + surfaceArea);
             Console.WriteLine("The volume of your room is " + volume);
             Console.WriteLine("The size of your room is " + size);
-
         }
     }
 }
