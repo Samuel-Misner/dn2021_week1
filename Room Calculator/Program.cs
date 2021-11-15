@@ -36,7 +36,7 @@ namespace VarDemo
                 }
                 else
                 {
-                    Console.Write("Please enter a valid length");
+                    Console.Write("Please enter a valid length: ");
                 }
             }
 
