@@ -12,11 +12,12 @@ namespace Powers_Table
 
             while (run)
             {
-                Console.Write("Hello user! Please enter an integer: ");
+                Console.Write("Hello user! Please enter an integer between 1 and 1290 inclusive: ");
+
                 bool validInput = false;
                 while (!validInput)
                 {
-                    if (int.TryParse(Console.ReadLine(), out userInt) && userInt > 0)
+                    if (int.TryParse(Console.ReadLine(), out userInt) && userInt > 0 && userInt <= 1290)
                     {
                         validInput = true;
                     }
@@ -26,16 +27,18 @@ namespace Powers_Table
                     }
                 }
 
-                Console.WriteLine("Number\t\tSquared\t\tCubed");
-                Console.WriteLine("");
+                Console.WriteLine("\nNumber\t\tSquared\t\tCubed\n");
 
                 for (int i = 1; i <= userInt; i++)
                 {
-                    Console.WriteLine((i) + "\t\t" + (i * i) + "\t\t" + (i * i * i));
-                }
+                    int num = i;
+                    int square = (int)Math.Pow(i, 2);
+                    int cube = (int)Math.Pow(i, 3);
 
-                Console.WriteLine("");
-                Console.Write("Would you like to input another integer? (y/n) ");
+                    Console.WriteLine($"{num}\t\t{square}\t\t{cube}");
+                }
+                
+                Console.Write("\nWould you like to input another integer? (y/n) ");
 
                 validInput = false;
                 while (!validInput)
@@ -58,8 +61,7 @@ namespace Powers_Table
                 }
             }
 
-            Console.WriteLine("")
-            Console.WriteLine("Thanks for using my program!");
+            Console.WriteLine("\nThanks for using my program!");
         }
     }
 }

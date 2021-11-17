@@ -14,17 +14,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Room Calculator", "Room Cal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Number Analyzer", "Number Analyzer\Number Analyzer.csproj", "{33667B66-5148-4A33-90B8-5361A5266C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConditionalsDemo", "ConditionalsDemo\ConditionalsDemo.csproj", "{C3C56165-7616-4F25-B842-8993DC4EB8C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConditionalsDemo", "ConditionalsDemo\ConditionalsDemo.csproj", "{C3C56165-7616-4F25-B842-8993DC4EB8C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpressionDemo", "ExpressionDemo\ExpressionDemo.csproj", "{DC994443-9C2F-48FF-836D-DC0B2538AB56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpressionDemo", "ExpressionDemo\ExpressionDemo.csproj", "{DC994443-9C2F-48FF-836D-DC0B2538AB56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfElseDemo", "IfElseDemo\IfElseDemo.csproj", "{E16BB43A-AAB6-4AAC-BA16-A0B5006428E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IfElseDemo", "IfElseDemo\IfElseDemo.csproj", "{E16BB43A-AAB6-4AAC-BA16-A0B5006428E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoopDemo", "LoopDemo\LoopDemo.csproj", "{7F0FF6A7-0482-41F8-9347-F2EBB61BAFD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoopDemo", "LoopDemo\LoopDemo.csproj", "{7F0FF6A7-0482-41F8-9347-F2EBB61BAFD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Powers Table", "Powers Table\Powers Table.csproj", "{B1CB5162-54B0-49A2-80F8-E76F3C06D47F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Powers Table", "Powers Table\Powers Table.csproj", "{B1CB5162-54B0-49A2-80F8-E76F3C06D47F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factorial Calculator", "Factorial Calculator\Factorial Calculator.csproj", "{0FCB4E29-1658-4F78-8153-8718A517A7F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial Calculator", "Factorial Calculator\Factorial Calculator.csproj", "{0FCB4E29-1658-4F78-8153-8718A517A7F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodDemo", "MethodDemo\MethodDemo.csproj", "{3021F039-D383-4644-BEEE-6AD9A619D795}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,10 @@ Global
 		{0FCB4E29-1658-4F78-8153-8718A517A7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FCB4E29-1658-4F78-8153-8718A517A7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FCB4E29-1658-4F78-8153-8718A517A7F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3021F039-D383-4644-BEEE-6AD9A619D795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3021F039-D383-4644-BEEE-6AD9A619D795}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3021F039-D383-4644-BEEE-6AD9A619D795}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3021F039-D383-4644-BEEE-6AD9A619D795}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
