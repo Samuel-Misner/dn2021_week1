@@ -9,8 +9,6 @@ namespace Number_Analyzer
 
             int userInt = 0;
 
-            bool isOdd;
-
             Console.Write("Hi! Please enter your name: ");
 
             string name = Console.ReadLine();
@@ -28,14 +26,8 @@ namespace Number_Analyzer
                     Console.Write(name + ", please enter a valid integer between 1 and 100: ");
                 }
             }
+            
             if (userInt%2 == 1)
-            {
-                isOdd = true;
-            }else
-            {
-                isOdd = false;
-            }
-            if (isOdd)
             {
                 if (userInt < 60)
                 {
@@ -59,7 +51,6 @@ namespace Number_Analyzer
             }
 
             Console.WriteLine("Thanks for using my program " + name + "!");
-
         }
     }
 }
