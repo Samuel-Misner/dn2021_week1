@@ -4,6 +4,16 @@ namespace Powers_Table
 {
     class Program
     {
+
+        static double pow(int n, int e)
+        {
+            double product = 1;
+            for (int i = 0; i < e; i++)
+            {
+                product *= n;
+            }
+            return product;
+        }
         static void Main(string[] args)
         {
             int userInt = 0;
@@ -32,8 +42,8 @@ namespace Powers_Table
                 for (int i = 1; i <= userInt; i++)
                 {
                     int num = i;
-                    int square = (int)Math.Pow(i, 2);
-                    int cube = (int)Math.Pow(i, 3);
+                    int square = (int)pow(i, 2);
+                    int cube = (int)pow(i, 3);
 
                     Console.WriteLine($"{num}\t\t{square}\t\t{cube}");
                 }
@@ -43,7 +53,7 @@ namespace Powers_Table
                 validInput = false;
                 while (!validInput)
                 {
-                    string userInput = Console.ReadLine();
+                    string userInput = Console.ReadLine().ToLower();
 
                     if (userInput == "y")
                     {

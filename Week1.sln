@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial Calculator", "Fac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodDemo", "MethodDemo\MethodDemo.csproj", "{3021F039-D383-4644-BEEE-6AD9A619D795}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex Ate My Neighbors", "Regex Ate My Neighbors\Regex Ate My Neighbors.csproj", "{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +76,10 @@ Global
 		{3021F039-D383-4644-BEEE-6AD9A619D795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3021F039-D383-4644-BEEE-6AD9A619D795}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3021F039-D383-4644-BEEE-6AD9A619D795}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
