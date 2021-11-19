@@ -4,23 +4,35 @@ namespace Pig_Latin
 {
     class Program
     {
-        static bool StartsWithVowel(string word)
+        static bool IsAVowel(char c)
         {
-            char c = word.ToLower()[0];
             return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+        }
+
+        static int FindFirstVowel(string word)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (IsAVowel(word[i]))
+                {
+                    return i - 1;
+                }
+            }
+            return 0;
         }
         static string PigLatinTranslator(string word)
         {
             if (word.Length > 0)
             {
                 string lower = word.ToLower();
-                if (StartsWithVowel(word))
+                if (IsAVowel(word[0]))
                 {
                     return $"{word}way";
                 }
                 else
                 {
-                    return $"{word.Substring(1, word.Length - 1)}{word[0]}ay";
+                    int vowelIndex = FindFirstVowel(word);
+                    return $"{word.Substring(vowelIndex + 1, word.Length - (vowelIndex + 1))}{word.Substring(0, vowelIndex + 1)}ay";
                 }
             }
             else
