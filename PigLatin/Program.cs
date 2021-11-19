@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Pig_Latin
 {
@@ -6,7 +7,13 @@ namespace Pig_Latin
     {
         static bool IsAVowel(char c)
         {
+            c = c.ToString().ToLower()[0];
             return (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+        }
+
+        static bool IsPunctuation(char c)
+        {
+            return (c == '.' || c == ',' || c == '!' || c == '?');
         }
 
         static int FindFirstVowel(string word)
@@ -20,19 +27,117 @@ namespace Pig_Latin
             }
             return 0;
         }
+
+        static bool WordContainsNum(string word)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] - 0 >= '0' - 0 && word[i] - 0 <= '9' - 0)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static bool WordContainsAt(string word)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] == '@')
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static bool WordContainsPunctuation(string word)
+        {
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (IsPunctuation(word[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        static List<int> IndexesOfPunctuation(string word)
+        {
+            List<int> indexes = new List<int>();
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (IsPunctuation(word[i]))
+                {
+                    indexes.Add(i);
+                }
+            }
+            return indexes;
+        }
+
         static string PigLatinTranslator(string word)
         {
+
             if (word.Length > 0)
             {
-                string lower = word.ToLower();
-                if (IsAVowel(word[0]))
+                if (!(WordContainsNum(word)) && !(WordContainsAt(word)))
                 {
-                    return $"{word}way";
+                    string extraPunctuation = "";
+
+                    if (WordContainsPunctuation(word))
+                    {
+                        List<int> indexes = IndexesOfPunctuation(word);
+
+                        string returnString = "";
+
+                        for (int i = 0; i < indexes.Count; i++)
+                        {
+                            if (i == 0)
+                            {
+                                returnString += word.Substring(0, indexes[i]);
+                            }
+                            else
+                            {
+                                returnString += word.Substring(indexes[i - 1] + 1, indexes[i] - (indexes[i - 1] + 1));
+                            }
+                        }
+                        for (int i = 0; i < indexes.Count; i++)
+                        {
+                            extraPunctuation += word.Substring(indexes[i], 1);
+                        }
+                        word = returnString;
+                    }
+                    if (IsAVowel(word[0]))
+                    {
+                        word = $"{word}way";
+                        if (extraPunctuation.Length > 0)
+                        {
+                            return word += extraPunctuation;
+                        }
+                        else
+                        {
+                            return word;
+                        }
+                    }
+                    else
+                    {
+                        int vowelIndex = FindFirstVowel(word);
+                        word = $"{word.Substring(vowelIndex, word.Length - vowelIndex)}{word.Substring(0, vowelIndex)}ay";
+                        if (extraPunctuation.Length > 0)
+                        {
+                            return word += extraPunctuation;
+                        }
+                        else
+                        {
+                            return word;
+                        }
+                    }
                 }
                 else
                 {
-                    int vowelIndex = FindFirstVowel(word);
-                    return $"{word.Substring(vowelIndex, word.Length - vowelIndex)}{word.Substring(0, vowelIndex)}ay";
+                    return word;
                 }
             }
             else
@@ -40,6 +145,7 @@ namespace Pig_Latin
                 return "";
             }
         }
+
         static void Main(string[] args)
         {
             bool run = true;
@@ -67,7 +173,7 @@ namespace Pig_Latin
                     }
                 }
 
-                Console.Write($"\nWould you like to translate another word? (y/n) ");
+                Console.Write($"\nWould you like to translate another word or phrase? (y/n) ");
 
                 bool validInput = false;
                 while (!validInput)
