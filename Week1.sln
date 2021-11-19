@@ -26,9 +26,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Powers Table", "Powers Tabl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factorial Calculator", "Factorial Calculator\Factorial Calculator.csproj", "{0FCB4E29-1658-4F78-8153-8718A517A7F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodDemo", "MethodDemo\MethodDemo.csproj", "{3021F039-D383-4644-BEEE-6AD9A619D795}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodDemo", "MethodDemo\MethodDemo.csproj", "{3021F039-D383-4644-BEEE-6AD9A619D795}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regex Ate My Neighbors", "Regex Ate My Neighbors\Regex Ate My Neighbors.csproj", "{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Regex Ate My Neighbors", "Regex Ate My Neighbors\Regex Ate My Neighbors.csproj", "{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pig Latin", "PigLatin\Pig Latin.csproj", "{155769A3-9678-48E7-96B4-5C1C86C60F3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -80,6 +82,10 @@ Global
 		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0FB181D-9CD7-4692-8D17-5E15E0A9EC55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155769A3-9678-48E7-96B4-5C1C86C60F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155769A3-9678-48E7-96B4-5C1C86C60F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155769A3-9678-48E7-96B4-5C1C86C60F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155769A3-9678-48E7-96B4-5C1C86C60F3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
