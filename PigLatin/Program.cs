@@ -15,7 +15,7 @@ namespace Pig_Latin
             {
                 if (IsAVowel(word[i]))
                 {
-                    return i - 1;
+                    return i;
                 }
             }
             return 0;
@@ -32,7 +32,7 @@ namespace Pig_Latin
                 else
                 {
                     int vowelIndex = FindFirstVowel(word);
-                    return $"{word.Substring(vowelIndex + 1, word.Length - (vowelIndex + 1))}{word.Substring(0, vowelIndex + 1)}ay";
+                    return $"{word.Substring(vowelIndex, word.Length - vowelIndex)}{word.Substring(0, vowelIndex)}ay";
                 }
             }
             else
